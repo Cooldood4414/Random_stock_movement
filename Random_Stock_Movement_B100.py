@@ -1,10 +1,11 @@
 import numpy as np 
 import matplotlib.pyplot as plt
 a = int(input('amount of simulations: '))
+sz = int(input('Amount of days to simulate: '))
 tm = 0 
 pc = input('Do yo want to see a graph (y/n): ')
 for i in range(a):
-    price = np.random.randint(-1,2,size=365) + 0.001
+    price = np.random.randint(-1,2,size=sz) + 0.001
     total = np.sum(price) 
     print(f'Total movement:${total:.2f}')
     t_t = total + 100
